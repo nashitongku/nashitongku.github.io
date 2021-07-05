@@ -1,0 +1,154 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="X-UA-Compatible" content="IE=edge"><meta name="baidu-site-verification" content="1EB8XoOl0C"><meta name="google-site-verification" content="K7thEgdLm0UfRWJ5MGdF7sCcjClSzAlxFLPv2Oz5CGM"><title>  · feng的成长日记</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content=" - Mr feng"><meta name="keywords"><meta name="author" content="Mr feng"><link rel="short icon" href="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/favicon.ico"><link rel="stylesheet" href="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/bubuzou.css"><link rel="search" type="application/opensearchdescription+xml" href="http://example.com/atom.xml" title="feng的成长日记"><script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="feng的成长日记" type="application/atom+xml">
+</head><body><header style="background: linear-gradient(to right, #4b6cb7, #182848);box-shadow: 0px 1px 1px #182828;"><div class="header row"><a href="/" class="logo-link"><img src="https://z3.ax1x.com/2021/06/27/RYrzNQ.png"></a><ul id="nav_list" class="nav nav-list"><li class="nav-list-item"><a href="/" target="_self" data-hover="博文" class="nav-list-link">博文</a></li><li class="nav-list-item"><a href="/archives/" target="_self" data-hover="归档" class="nav-list-link">归档</a></li><li class="nav-list-item"><a href="/categories/live/" target="_self" data-hover="生活" class="nav-list-link">生活</a></li><li class="nav-list-item"><a href="/categories/read/" target="_self" data-hover="读书" class="nav-list-link">读书</a></li><li class="nav-list-item"><a href="/abouts/" target="_self" data-hover="关于" class="nav-list-link">关于</a></li></ul><div class="search"><a id="search_btn" href="#search"></a></div><div id="nav_btn" class="nav-btn"><span></span><span></span><span></span></div></div></header><div class="row scroll-con"><section class="container"><!-- for archive page--><div id="postAr" class="post"><article class="post-block"><h1 class="post-title"></h1><div class="post-info">2021-07-04<p class="visit"><i data-identity="thinking/vue3.html" class="article-timer"></i><span>次访问</span></p></div><div class="post-content"><h3 id="vue3-x-新特性"><a href="#vue3-x-新特性" class="headerlink" title="vue3.x 新特性"></a>vue3.x 新特性</h3><h5 id="一、组合式api"><a href="#一、组合式api" class="headerlink" title="一、组合式api"></a>一、组合式api</h5><h5 id="二、tree-sharking-死代码消除"><a href="#二、tree-sharking-死代码消除" class="headerlink" title="二、tree-sharking(死代码消除)"></a>二、tree-sharking(死代码消除)</h5><p>可减少vue体积</p>
+<p>尝试了解其原理</p>
+<h5 id="三、-各种api的用法"><a href="#三、-各种api的用法" class="headerlink" title="三、 各种api的用法"></a>三、 各种api的用法</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; createApp &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">const</span> app = createApp(&#123;&#125;)</span><br><span class="line">app.component</span><br><span class="line">app.directive</span><br><span class="line">app.mixin	</span><br><span class="line">app.use</span><br><span class="line">app.config</span><br><span class="line">app.provide</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; defineComponent &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; ref, onMounted &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123; toRefs,computed, watch &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line">&lt;script lang=<span class="string">&quot;ts&quot;</span>&gt;</span><br><span class="line"><span class="keyword">import</span> &#123; computed, defineComponent &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> defineComponent(&#123;</span><br><span class="line">  <span class="attr">props</span>: (&#123;</span><br><span class="line">    <span class="attr">msg</span>: <span class="built_in">String</span></span><br><span class="line">  &#125; <span class="keyword">as</span> unknown) <span class="keyword">as</span> <span class="literal">undefined</span>,</span><br><span class="line">  <span class="function"><span class="title">setup</span>(<span class="params">props: &#123;</span></span></span><br><span class="line"><span class="params"><span class="function">    msg: string</span></span></span><br><span class="line"><span class="params"><span class="function">  &#125;</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> computedMsg = computed(<span class="function">() =&gt;</span> props.msg + <span class="string">&#x27;!!!&#x27;</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;</span><br><span class="line">      computedMsg,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h5 id="四、函数式组件"><a href="#四、函数式组件" class="headerlink" title="四、函数式组件"></a>四、函数式组件</h5><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; h &#125; <span class="keyword">from</span> <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"><span class="keyword">const</span> DynamicHeading = <span class="function">(<span class="params">props, context</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> h(<span class="string">`h<span class="subst">$&#123;props.level&#125;</span>`</span>, context.attrs, context.slots)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">DynamicHeading.props = [<span class="string">&#x27;level&#x27;</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> DynamicHeading</span><br></pre></td></tr></table></figure>
+
+
+
+<h5 id="五、片段-支持多个根节点，注意：非-Prop-的-Attribute）"><a href="#五、片段-支持多个根节点，注意：非-Prop-的-Attribute）" class="headerlink" title="五、片段(支持多个根节点，注意：非 Prop 的 Attribute）"></a>五、片段(支持多个根节点，注意：非 Prop 的 Attribute）</h5><p>禁用 attribute 继承的常见情况是需要将 attribute 应用于根节点之外的其他元素。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">inheritAttrs:<span class="literal">false</span> <span class="comment">//传给组件的 非props、v-on 也和props一起传到组件的$attrs属性</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="六、Teleport"><a href="#六、Teleport" class="headerlink" title="六、Teleport"></a>六、Teleport</h5><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;#modals&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">teleport</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">teleport</span> <span class="attr">to</span>=<span class="string">&quot;#modals&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>B<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">teleport</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- result--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;modals&quot;</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>A<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span>&gt;</span>B<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h5 id="七、-v-model"><a href="#七、-v-model" class="headerlink" title="七、 v-model"></a>七、 v-model</h5><p>支持定义修饰符、支持多v-model</p>
+<h5 id="八、setup"><a href="#八、setup" class="headerlink" title="八、setup"></a>八、setup</h5><p>接受两个参数：</p>
+<p>props:  传入定义的props</p>
+<p>context: 包含 attrs、slots和emit 三个对象</p>
+</div></article></div><div class="right-container"><div class="widget"><div class="category"><h4>分类归档</h4><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/JavaScript/">JavaScript</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Vue/">Vue</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/dos%E5%91%BD%E4%BB%A4%E8%A1%8C/">dos命令行</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/git/">git</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/http/">http</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/nodejs/">nodejs</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/">构建工具</a><span class="category-list-count">2</span></li></ul></div></div><div class="widget"><div class="tagcloud"><h4>标签云</h4><a href="/tags/Vue/" style="font-size: 10px;">Vue</a> <a href="/tags/dos/" style="font-size: 10px;">dos</a> <a href="/tags/git/" style="font-size: 10px;">git</a> <a href="/tags/gulp/" style="font-size: 20px;">gulp</a> <a href="/tags/http/" style="font-size: 10px;">http</a> <a href="/tags/javascript/" style="font-size: 20px;">javascript</a> <a href="/tags/nodejs/" style="font-size: 10px;">nodejs</a> <a href="/tags/plugin/" style="font-size: 10px;">plugin</a></div></div><div class="widget"><div class="recent"><h4>最近文章</h4><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2018/09/01/%E8%87%AA%E5%8A%A8%E5%8C%96-2018-06-29-%E5%91%BD%E4%BB%A4%E8%A1%8C/">成熟的命令行要学会自己提交代码</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/04/16/JavaScript-2018-04-16-nodejs/">npm script</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/18/git-2018-03-18-ssh/">ssh 配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/JavaScript-2018-03-13-Vue-api/">Vue api</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/03/13/JavaScript-2018-03-13-Webpack/">webpack图片优化</a></li></ul></div></div></div></section></div><div class="right-menu"></div><div class="modal search-modal"><div class="input-field"><input type="text" id="search_input"><label for="search-input">搜索</label></div><div id="search_result" class="search-result"></div></div><div class="blog-overlay"></div><footer class="row"><div class="footer-con"><div class="paginator"></div><a href="#comment" class="comment-anchor"></a><div id="vcomments"></div><script>new Valine({
+    el: "#vcomments",
+    appId: "aD8jJBpu4oew3ovNY73z6Rdq-gzGzoHsz",
+    appKey: "FdzS5SOPHdhYQoEUngQ8K2QW",
+    notify: false,
+    verify: false,
+    avatar: "robohash",
+    visitor: true,
+    placeholder: "随便说点什么～.～",
+});</script><div class="copyright"><p>© 2016 - 2021 <a target="_blank">Mr feng</a>, powered by <a href="https://hexo.io/" target="_blank">Hexo</a> <br> and <a href="https://github.com/Bulandent/hexo-theme-bubuzou" target="_blank">hexo-theme-bubuzou</a></p><p> <span style="padding-right: 6px;">闽ICP备16007301号-2</span></p></div><div class="totop"><i></i></div></div></footer><script async src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-MML-AM_CHTML"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/jquery-1.8.2.min.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/articleCatalog.js"></script><script src="https://bubuzou.oss-cn-shenzhen.aliyuncs.com/blog/202010/main.js"></script><script>(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;e=o.createElement(i);r=o.getElementsByTagName(i)[0];e.src='//www.google-analytics.com/analytics.js';r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));ga('create',"UA-65933410-1",'auto');ga('send','pageview');</script><script>const valineAPI = (() => {
+try {
+    AV.init("aD8jJBpu4oew3ovNY73z6Rdq-gzGzoHsz", "FdzS5SOPHdhYQoEUngQ8K2QW");
+} catch(error) {}
+const isExist = (identity) => {
+    identity = identity || getRealPath();
+    let query = new AV.Query('Timer');
+    return new Promise((resolve, reject) => {
+    query.equalTo("identity", identity);
+    query.find().then(results => {
+        resolve(results.length > 0);
+    }, error => reject(error));
+    })
+}
+
+const _get = (identity) => {
+    let query = null;
+    if(identity && identity instanceof Array){
+    let querys = [];
+    for(let i = 0; i < identity.length; ++i) {
+        querys[i] = new AV.Query('Timer');
+        querys[i].equalTo('identity', identity[i]);
+    }
+    query = AV.Query.or.apply(null ,querys);
+    } else {
+    identity = identity || getRealPath();
+    query = new AV.Query("Timer");
+    query.equalTo("identity", identity);
+    }
+
+    return new Promise((resolve, reject) => {
+    query.find()
+    .then(results => resolve(results))
+    .catch(error => reject(error))
+    })
+}
+
+const create = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let Todo = AV.Object.extend('Timer');
+    let todo = new Todo();
+    todo.set("times", 1);
+    todo.set("identity", identity);
+    todo.save().then(res => resolve(true), error => reject(error));
+    })
+}
+
+const update = (identity) => {
+    identity = identity || getRealPath();
+    return new Promise((resolve, reject) => {
+    let query = new AV.Query('Timer');
+    query.equalTo("identity", identity);
+    query.find().then(todos => {
+        todos.forEach(todo => {
+        todo.set("times", todo.attributes.times + 1);
+        });
+        return AV.Object.saveAll(todos);
+    }).then(todos => resolve(true), error => reject(error));
+    })
+}
+
+return {
+    isExist,
+    _get,
+    update,
+    create
+}
+})()
+
+const calcAndWriteTimes = () => {
+let isPost = false;
+
+let timerAllDOM = document.querySelectorAll(".article-timer");
+
+if(isPost) {
+    let identity = timerAllDOM[0].getAttribute("data-identity");
+    valineAPI.isExist(identity)
+    .then(exist => {
+    if(exist) {
+        return valineAPI.update(identity);
+    }
+    return new Promise(resolve => resolve(true));
+    })
+    .then( succuess => valineAPI._get(identity))
+    .then( result => timerAllDOM[0].innerText = result[0].attributes.times)
+    .catch(error => console.log(error.message))
+    return ;
+}
+
+let timerDOMCache = {};
+
+for(let timerDOM of timerAllDOM) {
+    let identity = timerDOM.getAttribute("data-identity");
+    if(timerDOMCache.hasOwnProperty(identity)){
+    timerDOMCache[identity].dom.push(timerDOM);
+    }else{
+    timerDOMCache[identity] = {
+        dom: [timerDOM],
+        times: undefined
+    };
+    }
+}
+
+let identities = Object.keys(timerDOMCache);
+valineAPI._get(identities).then(results => {
+    for(let result of results) {
+    let {identity, times} = result.attributes;
+    timerDOMCache[identity].times = times;
+    timerDOMCache[identity].dom.map(item => item.innerText = times);
+    }
+    for(let identity of identities) {
+    if(timerDOMCache[identity].times){
+        continue;
+    }
+    timerDOMCache[identity].dom.map(item => item.innerText = 1);
+    valineAPI.create(identity);
+    }
+}).catch(error => console.log(error.message))
+}
+
+if(true){
+calcAndWriteTimes();
+}</script></body></html>

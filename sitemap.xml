@@ -312,7 +312,7 @@
 
   <url>
     <loc>http://example.com/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -320,49 +320,49 @@
   
   <url>
     <loc>http://example.com/tags/maven/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/java-java8/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/gulp/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/mysql/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/java/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/docker/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/tags/redis/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
@@ -371,49 +371,49 @@
   
   <url>
     <loc>http://example.com/categories/maven/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/java8-java/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/git/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/mysql/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/java/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/docker/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
     <loc>http://example.com/categories/redis/</loc>
-    <lastmod>2022-01-17</lastmod>
+    <lastmod>2022-01-18</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>

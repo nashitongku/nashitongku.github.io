@@ -25,30 +25,29 @@
     <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
     <div class="post-title">
         <p>
-            
+            CSRF跨站请求伪造
         </p>
         <hr>
     </div>
     <div class="post-content">
-        <p>数组类型(GenericArrayType)</p>
-<p>参数化类型(ParameterizedType)</p>
-<p>类型变量(TypeVariable)</p>
-<p>通配符类型(WildcardType)</p>
-<p>保留一切权利 all right reserved</p>
-<p>consensus（一致性）</p>
-<p>leader election（选举）</p>
-<p>command line interface(命令行)</p>
-<p>Coordinating Distributed Systems（协调分布式系统）</p>
-<p>off-the-shelf （现成的）</p>
-<p>from scratch（白手起家、从头开始）</p>
-<p>high-performance（高性能）</p>
-<p>skimp on them(对它们进行缩减)</p>
-<p>a centralized service for (…的集中服务)</p>
-<p>maintaining configuration information（维持配置信息）</p>
-<p>distributed synchronization（分布式同步）</p>
-<p>are used in some form or another（以某种形式使用）</p>
-<p>race conditions （竞争条件）</p>
-<p>in the presence of change（在变化面前）</p>
+        <h3 id="什么是CSRF攻击"><a href="#什么是CSRF攻击" class="headerlink" title="什么是CSRF攻击?"></a>什么是CSRF攻击?</h3><p><strong>CSRF:</strong> Cross Site Regust Forgery跨站请求伪造</p>
+<p>一个正常的请求会将合法用户的session id保存到浏览器的cookie。这时候，如果用户在浏览器中打来另一个tab页，那这个<br>tab页也是可以获得浏览器的cookie。黑客就可以利用这个cookie信息进行攻击。</p>
+<h3 id="攻击过程"><a href="#攻击过程" class="headerlink" title="攻击过程"></a>攻击过程</h3><h4 id="原理及过程"><a href="#原理及过程" class="headerlink" title="原理及过程"></a>原理及过程</h4><ol>
+<li>用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A；</li>
+<li>在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A；</li>
+<li>用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B；</li>
+<li>网站B接收到用户请求后，返回一些攻击性代码，并发出一个请求要求访问第三方站点A；</li>
+<li>浏览器在接收到这些攻击性代码后，根据网站B的请求，在用户不知情的情况下携带Cookie信息，向网站A发出请求。网站A并不知道该请求其实是由B发起的，所以会根据用户C的Cookie信息以C的权限处理该请求，导致来自网站B的恶意代码被执行。</li>
+</ol>
+<h4 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h4><p>1、某银行网站A可以以GET请求的方式发起转账操作。<code>www.xx.com/transfor.do?accountNum= 100&amp;money= 1000</code>,accountNum表示目标账户。这个请求肯定是需要登录才可以正常访问的。</p>
+<p>2、攻击者在某个论坛或者网站上，上传一 个图片，链接地址是<code>www.xxx.com/transfer.do?accountNum=888&amp;money=10000</code>,其中这个accountNum就是攻击者自己的银行账户。</p>
+<p>3、如果有一个用户，登录了银行网站，然后又打开浏览器的另一个tab页，点击了这个图片。这时，银行就会受理到一个带了正确cookie的请求，就会完成转账。用户的钱就被盗了。</p>
+<h4 id="CSRF漏洞检测"><a href="#CSRF漏洞检测" class="headerlink" title="CSRF漏洞检测"></a>CSRF漏洞检测</h4><p>检测CSRF漏洞是一项比较繁琐的工作，最简单的方法就是抓取一个正常请求的数据包，去掉Referer字段后再重新提交，如果该提交还有效，那么基本上可以确定存在CSRF漏洞。</p>
+<p>随着对CSRF漏洞研究的不断深入，不断涌现出一些专门针对CSRF漏洞进行检测的工具，如CSRFTester，CSRF Request Builder等。</p>
+<p>以CSRFTester工具为例，CSRF漏洞检测工具的测试原理如下：使用CSRFTester进行测试时，首先需要抓取我们在浏览器中访问过的所有链接以及所有的表单等信息，然后通过在CSRFTester中修改相应的表单等信息，重新提交，这相当于一次伪造客户端请求。如果修改后的测试请求成功被网站服务器接受，则说明存在CSRF漏洞，当然此款工具也可以被用来进行CSRF攻击。</p>
+<h3 id="CSRF防止方式"><a href="#CSRF防止方式" class="headerlink" title="CSRF防止方式:"></a>CSRF防止方式:</h3><h4 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h4><p>1、尽量使用POST请求，限制GET请求。POST请求可以带请求体，攻击者就不容易伪造出请求。</p>
+<p>2、将cookie设置 为HttpOnly : respose.setHeader(“Set-Cookie”,” cookiename=cookievalue;HttpOnly”)。</p>
+<p>3、增加token：<br>在请求中放入一个攻击者无法伪造的信息，并且该信息不存在于cookie当中。<br><code>&lt;input type= &#39;hidden’value= &#39; adfasdf&#39;/&gt;</code>这也是Spring Security框架中采用的防范方式。</p>
 
     </div>
 

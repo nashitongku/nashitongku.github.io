@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title></title>
+      <link href="/2022/12/03/%E5%88%86%E5%B8%83%E5%BC%8F-%E5%88%86%E5%B8%83%E5%BC%8F%E7%BB%84%E4%BB%B6/"/>
+      <url>/2022/12/03/%E5%88%86%E5%B8%83%E5%BC%8F-%E5%88%86%E5%B8%83%E5%BC%8F%E7%BB%84%E4%BB%B6/</url>
+      
+        <content type="html"><![CDATA[<p>分布式事务：</p><p>seata+feign</p><p>分布式锁</p><p>redission</p><p>分布式限流</p><p>Sentinel</p><p>注册中心</p><p>Zookeeper</p><p>分布式session</p><p>JWT</p><p>分布式调度</p><p>Xxl-job</p><p>分库分表</p><p>Shardingsphere(分库分表、读写分离)</p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>消息队列</title>
       <link href="/2021/11/22/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-rabbit-mq/"/>
       <url>/2021/11/22/%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97-rabbit-mq/</url>

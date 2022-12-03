@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-01-28T08:46:28.488Z</updated>
+  <updated>2022-12-03T14:21:37.361Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,35 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="http://example.com/2022/12/03/%E5%88%86%E5%B8%83%E5%BC%8F-%E5%88%86%E5%B8%83%E5%BC%8F%E7%BB%84%E4%BB%B6/"/>
+    <id>http://example.com/2022/12/03/%E5%88%86%E5%B8%83%E5%BC%8F-%E5%88%86%E5%B8%83%E5%BC%8F%E7%BB%84%E4%BB%B6/</id>
+    <published>2022-12-03T14:21:37.361Z</published>
+    <updated>2022-12-03T14:21:37.361Z</updated>
+    
+    <content type="html"><![CDATA[<p>分布式事务：</p><p>seata+feign</p><p>分布式锁</p><p>redission</p><p>分布式限流</p><p>Sentinel</p><p>注册中心</p><p>Zookeeper</p><p>分布式session</p><p>JWT</p><p>分布式调度</p><p>Xxl-job</p><p>分库分表</p><p>Shardingsphere(分库分表、读写分离)</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;分布式事务：&lt;/p&gt;
+&lt;p&gt;seata+feign&lt;/p&gt;
+&lt;p&gt;分布式锁&lt;/p&gt;
+&lt;p&gt;redission&lt;/p&gt;
+&lt;p&gt;分布式限流&lt;/p&gt;
+&lt;p&gt;Sentinel&lt;/p&gt;
+&lt;p&gt;注册中心&lt;/p&gt;
+&lt;p&gt;Zookeeper&lt;/p&gt;
+&lt;p&gt;分布式session&lt;/p&gt;
+&lt;p</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>消息队列</title>
